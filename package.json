@@ -1,6 +1,6 @@
 {
     "name": "@pkg-nec/emulatorjs",
-    "version": "4.2.3",
+    "version": "4.2.4",
     "type": "module",
     "description": "EmulatorJS is a frontend for RetroArch in the web browser.",
     "homepage": "https://github.com/pkg-nec/EmulatorJS#readme",
