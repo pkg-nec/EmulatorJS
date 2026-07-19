@@ -23,11 +23,14 @@
         "@node-minify/clean-css": "^9.0.1",
         "@node-minify/core": "^9.0.2",
         "@node-minify/terser": "^9.0.1",
-        "http-server": "^14.1.1",
+        "@pkg-nec/http-server": "^14.1.1",
         "node-7z": "^3.0.0",
         "node-fetch": "^3.3.2",
         "nipplejs": "^0.10.2",
         "socket.io": "^4.8.1"
+    },
+    "engines": {
+        "node": "^20.19.0 || ^22.12.0 || >=24.0.0"
     },
     "optionalDependencies": {
         "@emulatorjs/cores": "latest"
