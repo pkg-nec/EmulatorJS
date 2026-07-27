@@ -12,6 +12,7 @@ jobs:
   publish:
     name: npm publish
     runs-on: ubuntu-latest
+    environment: npm-publish
     steps:
       - name: Checkout the tagged commit
         uses: actions/checkout@v4
