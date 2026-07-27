@@ -1,20 +1,20 @@
 {
-    "name": "@emulatorjs/cores",
-    "version": "4.2.3",
+    "name": "@pkg-nec/emulatorjs-cores",
+    "version": "4.2.4",
     "type": "module",
     "description": "EmulatorJS Cores",
-    "homepage": "https://emulatorjs.org",
+    "homepage": "https://github.com/pkg-nec/EmulatorJS#readme",
     "license": "GPL-3.0",
     "repository": {
         "type": "git",
-        "url": "https://github.com/EmulatorJS/EmulatorJS.git"
+        "url": "git+https://github.com/pkg-nec/EmulatorJS.git"
     },
     "bugs": {
-        "url": "https://github.com/EmulatorJS/EmulatorJS/issues"
+        "url": "https://github.com/pkg-nec/EmulatorJS/issues"
     },
     "sideEffects": true,
     "dependencies": {
-        "@emulatorjs/emulatorjs": "latest",
+        "@pkg-nec/emulatorjs": "latest",
         "@emulatorjs/core-81": "latest",
         "@emulatorjs/core-mame2003": "latest",
         "@emulatorjs/core-vice_x64": "latest",
