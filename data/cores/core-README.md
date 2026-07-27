@@ -15,11 +15,11 @@ https://github.com/EmulatorJS/build
 To install core, run the following command:
 
 ```bash
-npm install @emulatorjs/core-<!-- EJS_CORE_NAME -->
+npm install @pkg-nec/emulatorjs-core-<!-- EJS_CORE_NAME -->
 ```
 To install all cores, run the following command:
 
 ```bash
-npm install @emulatorjs/cores
+npm install @pkg-nec/emulatorjs-cores
 ```
 
