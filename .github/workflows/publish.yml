@@ -1,0 +1,52 @@
+name: Publish to npm
+
+on:
+  release:
+    types: [published]
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  publish:
+    name: npm publish
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the tagged commit
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.release.tag_name }}
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22.x
+          registry-url: 'https://registry.npmjs.org'
+
+      - name: Pin npm to a version with OIDC trusted publishing support
+        run: npm install -g npm@11.10.0
+
+      - name: Sanity-check tag matches package.json version
+        run: |
+          TAG="${{ github.event.release.tag_name }}"
+          PKG_VERSION="v$(node -p "require('./package.json').version")"
+          if [ "$TAG" != "$PKG_VERSION" ]; then
+            echo "Tag ${TAG} does not match package.json version ${PKG_VERSION}" >&2
+            exit 1
+          fi
+
+      - name: Install root dependencies
+        run: npm install --ignore-scripts --omit=dev
+
+      - name: Prepare main package
+        run: node build.js --npm=emulatorjs
+
+      - name: Publish umbrella package
+        run: |
+          cd data/cores
+          npm install --ignore-scripts --omit=dev
+          npm publish --provenance --access public
+
+      - name: Publish main package
+        run: npm publish --provenance --access public
