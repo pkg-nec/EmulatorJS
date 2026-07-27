@@ -132,7 +132,7 @@ if (!build_type) {
         const packageContent = fs.readFileSync(packagePath, 'utf8');
         const packageJson = JSON.parse(packageContent);
         packageJson.dependencies = {
-            "@emulatorjs/emulatorjs": "latest"
+            "@pkg-nec/emulatorjs": "latest"
         };
         fs.writeFileSync(packagePath, JSON.stringify(packageJson, null, 4), 'utf8');
         for (const core in cores) {
@@ -156,13 +156,13 @@ if (!build_type) {
             const corePackageDestPath = path.resolve('data', 'cores', core, 'package.json');
             const corePackageContent = fs.readFileSync(corePackagePath, 'utf8');
             const corePackageJson = JSON.parse(corePackageContent);
-            corePackageJson.name = `@emulatorjs/core-${core}`;
+            corePackageJson.name = `@pkg-nec/emulatorjs-core-${core}`;
             corePackageJson.description = `EmulatorJS Core: ${core}`;
             corePackageJson.license = allCores.find(c => c.name === core).license;
             corePackageJson.repository.url = allCores.find(c => c.name === core).repo + '.git';
             corePackageJson.bugs.url = allCores.find(c => c.name === core).repo + '/issues';
             corePackageJson.dependencies = {
-                "@emulatorjs/emulatorjs": "latest"
+                "@pkg-nec/emulatorjs": "latest"
             };
             fs.writeFileSync(corePackageDestPath, JSON.stringify(corePackageJson, null, 4), 'utf8');
 
@@ -174,7 +174,7 @@ if (!build_type) {
                 .replace(/<!-- EJS_CORE_REPO -->/g, allCores.find(c => c.name === core).repo);
             fs.writeFileSync(coreReadmeDestPath, updatedCoreReadmeContent, 'utf8');
 
-            packageJson.dependencies[`@emulatorjs/core-${core}`] = "latest";
+            packageJson.dependencies[`@pkg-nec/emulatorjs-core-${core}`] = "latest";
             fs.writeFileSync(packagePath, JSON.stringify(packageJson, null, 4), 'utf8');
         }
         console.log("EmulatorJS cores built successfully!");
