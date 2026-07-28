@@ -17,7 +17,8 @@
     "start": "http-server",
     "minify": "node minify/minify.js",
     "build": "node build.js",
-    "update": "node update.js"
+    "update": "node update.js",
+    "test": "tap"
   },
   "dependencies": {
     "@node-minify/clean-css": "^9.0.1",
@@ -37,5 +38,8 @@
   },
   "devDependencies": {
     "tap": "^21.7.4"
+  },
+  "tap": {
+    "allow-incomplete-coverage": true
   }
 }
