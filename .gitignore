@@ -12,3 +12,6 @@ data/cores/*
 .vscode/*
 *.tgz
 dist/
+.tap/
+
+.idea/
