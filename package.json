@@ -1,38 +1,38 @@
 {
-    "name": "@pkg-nec/emulatorjs",
-    "version": "4.2.6",
-    "type": "module",
-    "description": "EmulatorJS is a frontend for RetroArch in the web browser.",
-    "homepage": "https://github.com/pkg-nec/EmulatorJS#readme",
-    "license": "GPL-3.0",
-    "sideEffects": true,
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/pkg-nec/EmulatorJS.git"
-    },
-    "bugs": {
-        "url": "https://github.com/pkg-nec/EmulatorJS/issues"
-    },
-    "scripts": {
-        "start": "http-server",
-        "minify": "node minify/minify.js",
-        "build": "node build.js",
-        "update": "node update.js"
-    },
-    "dependencies": {
-        "@node-minify/clean-css": "^9.0.1",
-        "@node-minify/core": "^9.0.2",
-        "@node-minify/terser": "^9.0.1",
-        "@pkg-nec/http-server": "^14.1.1",
-        "nipplejs": "^0.10.2",
-        "node-7z": "^3.0.0",
-        "node-fetch": "^3.3.2",
-        "socket.io": "^4.8.1"
-    },
-    "engines": {
-        "node": "^20.19.0 || ^22.12.0 || >=24.0.0"
-    },
-    "optionalDependencies": {
-        "@pkg-nec/emulatorjs-cores": "latest"
-    }
+  "name": "@pkg-nec/emulatorjs",
+  "version": "4.2.6",
+  "type": "module",
+  "description": "EmulatorJS is a frontend for RetroArch in the web browser.",
+  "homepage": "https://github.com/pkg-nec/EmulatorJS#readme",
+  "license": "GPL-3.0",
+  "sideEffects": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pkg-nec/EmulatorJS.git"
+  },
+  "bugs": {
+    "url": "https://github.com/pkg-nec/EmulatorJS/issues"
+  },
+  "scripts": {
+    "start": "http-server",
+    "minify": "node minify/minify.js",
+    "build": "node build.js",
+    "update": "node update.js"
+  },
+  "dependencies": {
+    "@node-minify/clean-css": "^9.0.1",
+    "@node-minify/core": "^9.0.2",
+    "@node-minify/terser": "^9.0.1",
+    "@pkg-nec/http-server": "^14.1.1",
+    "nipplejs": "^0.10.2",
+    "node-7z": "^3.0.0",
+    "node-fetch": "^3.3.2",
+    "socket.io": "^4.8.1"
+  },
+  "engines": {
+    "node": "^20.19.0 || ^22.12.0 || >=24.0.0"
+  },
+  "optionalDependencies": {
+    "@pkg-nec/emulatorjs-cores": "latest"
+  }
 }
