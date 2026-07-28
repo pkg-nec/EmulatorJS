@@ -18,7 +18,8 @@
     "minify": "node minify/minify.js",
     "build": "node build.js",
     "update": "node update.js",
-    "test": "tap"
+    "test": "tap test/",
+    "test-e2e": "tap e2e/"
   },
   "dependencies": {
     "@node-minify/clean-css": "^9.0.1",
