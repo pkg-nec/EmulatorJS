@@ -1,8 +1,8 @@
 import path from "path";
 import { fileURLToPath } from "url";
-import minify from "@node-minify/core";
-import terser from "@node-minify/terser";
-import cleanCSS from "@node-minify/clean-css";
+import { minify } from "@node-minify/core";
+import { terser } from "@node-minify/terser";
+import { cleanCss } from "@node-minify/clean-css";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -22,7 +22,7 @@ export async function doMinify(inputJs, outputJs, inputCss, outputCss) {
             console.log("Minified JS");
         });
     await minify({
-        compressor: cleanCSS,
+        compressor: cleanCss,
         input: inputCss,
         output: outputCss,
     })
