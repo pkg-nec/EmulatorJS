@@ -7,6 +7,9 @@ on:
       - synchronize
       - reopened
 
+permissions:
+  contents: read
+
 jobs:
   check-newlines:
     runs-on: ubuntu-latest
