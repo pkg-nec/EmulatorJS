@@ -25,7 +25,7 @@
     "@node-minify/clean-css": "^10.5.0",
     "@node-minify/core": "^10.5.0",
     "@node-minify/terser": "^10.5.0",
-    "@pkg-nec/http-server": "^14.1.1",
+    "@pkg-nec/http-server": "^15.0.0",
     "nipplejs": "^0.10.2",
     "node-7z": "^3.0.0",
     "node-fetch": "^3.3.2",
