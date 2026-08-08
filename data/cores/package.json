@@ -1,6 +1,6 @@
 {
     "name": "@pkg-nec/emulatorjs-cores",
-    "version": "4.2.7",
+    "version": "4.2.8",
     "type": "module",
     "description": "EmulatorJS Cores",
     "homepage": "https://github.com/pkg-nec/EmulatorJS#readme",
