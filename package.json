@@ -38,7 +38,7 @@
     "@pkg-nec/emulatorjs-cores": "latest"
   },
   "devDependencies": {
-    "tap": "^21.7.4"
+    "tap": "^21.7.5"
   },
   "tap": {
     "allow-incomplete-coverage": true
